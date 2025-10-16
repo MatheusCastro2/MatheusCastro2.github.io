@@ -1,18 +1,24 @@
 import './App.css'
+import Competencias from './components/competencias'
 import Header from './components/Header'
 import Home from './components/home'
 import Sobre from './components/Sobre'
 
 function App() {
-
-
   return (
-    <section>
-    <Header></Header>
-    <Home></Home>
-    <Sobre></Sobre>
-    </section>
-
+    
+    <>
+      <Header />
+      <section id="home">
+        <Home />
+      </section>
+      <section id="sobre">
+        <Sobre />
+      </section>
+      <section id="competencias">
+        <Competencias />
+      </section>
+    </>
   )
 }
 

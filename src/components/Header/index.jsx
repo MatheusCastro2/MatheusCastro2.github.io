@@ -1,19 +1,17 @@
 import styled from "styled-components"
 
+
 const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 4em;
+    padding: 0.0em 4em;
     background-color: #000000ff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 
     h1 {
         font-size: 2em;
@@ -34,23 +32,36 @@ const Opcao = styled.li`
     list-style: none;
 
     &:hover {
-    transform: scale(1.05);
-    text-shadow: 
-        0 0 5px rgba(0, 255, 55, 0.5),
-        0 0 10px rgba(0, 255, 55, 0.5),
-        0 0 15px rgba(0, 255, 55, 0.5);
-}
+        transform: scale(1.05);
+        text-shadow: 
+            0 0 5px rgba(0, 255, 55, 0.5),
+            0 0 10px rgba(0, 255, 55, 0.5),
+            0 0 15px rgba(0, 255, 55, 0.5);
+    }
+
+    /* Estilo para a tag de âncora dentro do <li> */
+    a {
+        text-decoration: none;
+        color: #ffffffff; /* Garante que a cor seja a que você quer */
+    }
 `
 
-const testoOpcoes = ['Home', 'Sobre', 'Competências']
 
-export default function Header(){
-    return(
+const textoOpcoes = [
+    { texto: 'Home', id: 'home' },
+    { texto: 'Sobre', id: 'sobre' },
+    { texto: 'Competências', id: 'competencias' }
+];
+
+export default function Header() {
+    return (
         <HeaderContainer>
             <h1>Matheus Castro</h1>
             <Opcoes>
-                {testoOpcoes.map((texto) =>(
-                    <Opcao><p>{texto}</p></Opcao>
+                {textoOpcoes.map((item) => (
+                    <Opcao key={item.id}>
+                        <a href={`#${item.id}`}>{item.texto}</a>
+                    </Opcao>
                 ))}
             </Opcoes>
         </HeaderContainer>
