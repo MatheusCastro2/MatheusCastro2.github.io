@@ -33,7 +33,7 @@ const allCompetencies = [
         filter: 'Front-end',
         icon: Tela,
         title: 'Desenvolvimento Front-end',
-        skills: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Styled Components'],
+        skills: ['React', 'JavaScript', 'HTML5', 'CSS', 'Styled Components'],
         description: 'Habilidade em criar interfaces de usuário intuitivas e responsivas com tecnologias modernas.'
     },
 

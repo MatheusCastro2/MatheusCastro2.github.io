@@ -50,7 +50,8 @@ const Opcao = styled.li`
 const textoOpcoes = [
     { texto: 'Home', id: 'home' },
     { texto: 'Sobre', id: 'sobre' },
-    { texto: 'Competências', id: 'competencias' }
+    { texto: 'Projetos', id: 'projetos' },
+    { texto: 'Competências', id: 'competencias' },
 ];
 
 export default function Header() {

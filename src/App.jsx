@@ -2,6 +2,7 @@ import './App.css'
 import Competencias from './components/competencias'
 import Header from './components/Header'
 import Home from './components/home'
+import Projetos from './components/Projetos'
 import Sobre from './components/Sobre'
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
       </section>
       <section id="sobre">
         <Sobre />
+      </section>
+      <section id="projetos">
+        <Projetos></Projetos>
       </section>
       <section id="competencias">
         <Competencias />
